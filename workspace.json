@@ -1,10 +1,143 @@
 {
-  
-  
   "version": 2,
-  
-  "projects": {},
   "cli": {
-    "defaultCollection": "@nrwl/workspace"
-  }
+    "defaultCollection": "@nrwl/angular"
+  },
+  "generators": {
+    "@nrwl/angular:application": {
+      "style": "css",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "style": "css",
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "css"
+    }
+  },
+  "projects": {
+    "angular-msal-example": {
+      "projectType": "application",
+      "root": "apps/angular-msal-example",
+      "sourceRoot": "apps/angular-msal-example/src",
+      "prefix": "kauppfbi-blogs",
+      "targets": {
+        "build": {
+          "executor": "@angular-devkit/build-angular:browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/angular-msal-example",
+            "index": "apps/angular-msal-example/src/index.html",
+            "main": "apps/angular-msal-example/src/main.ts",
+            "polyfills": "apps/angular-msal-example/src/polyfills.ts",
+            "tsConfig": "apps/angular-msal-example/tsconfig.app.json",
+            "assets": [
+              "apps/angular-msal-example/src/favicon.ico",
+              "apps/angular-msal-example/src/assets"
+            ],
+            "styles": ["apps/angular-msal-example/src/styles.css"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "apps/angular-msal-example/src/environments/environment.ts",
+                  "with": "apps/angular-msal-example/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "executor": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "angular-msal-example:build:production"
+            },
+            "development": {
+              "browserTarget": "angular-msal-example:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "executor": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "angular-msal-example:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/angular-msal-example/src/**/*.ts",
+              "apps/angular-msal-example/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/angular-msal-example"],
+          "options": {
+            "jestConfig": "apps/angular-msal-example/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "angular-msal-example-e2e": {
+      "root": "apps/angular-msal-example-e2e",
+      "sourceRoot": "apps/angular-msal-example-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/angular-msal-example-e2e/cypress.json",
+            "tsConfig": "apps/angular-msal-example-e2e/tsconfig.e2e.json",
+            "devServerTarget": "angular-msal-example:serve:development"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "angular-msal-example:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/angular-msal-example-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "angular-msal-example"
 }

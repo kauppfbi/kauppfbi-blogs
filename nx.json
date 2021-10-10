@@ -1,8 +1,4 @@
 {
-  "npmScope": "kauppfbi-blogs",
-  "affected": {
-    "defaultBase": "master"
-  },
   "implicitDependencies": {
     "workspace.json": "*",
     "package.json": {
@@ -14,19 +10,26 @@
     ".eslintrc.json": "*",
     "nx.json": "*"
   },
+  "affected": {
+    "defaultBase": "master"
+  },
+  "npmScope": "kauppfbi-blogs",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ],
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
         "accessToken": "OTQ5MTBjNjItNzgyYy00MTQwLThmMDQtNThkYWQ2Y2IzMjIyfHJlYWQtd3JpdGU="
       }
     }
   },
-  "projects": {}
+  "projects": {
+    "angular-msal-example": {
+      "tags": []
+    },
+    "angular-msal-example-e2e": {
+      "tags": [],
+      "implicitDependencies": ["angular-msal-example"]
+    }
+  }
 }

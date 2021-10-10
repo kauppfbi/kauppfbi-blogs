@@ -1,0 +1,8 @@
+<div data-cy="profile">
+  <p data-cy="firstName"><strong>First Name:</strong> {{ profile?.givenName }}</p>
+  <p data-cy="lastName"><strong>Last Name:</strong> {{ profile?.surname }}</p>
+  <p data-cy="email"><strong>Email:</strong> {{ profile?.userPrincipalName }}</p>
+  <p data-cy="id"><strong>Id:</strong> {{ profile?.id }}</p>
+</div>
+
+<a mat-button [routerLink]="['detail']">Click for more details</a>

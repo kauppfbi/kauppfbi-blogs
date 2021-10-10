@@ -1,0 +1,20 @@
+{
+  "fileServerFolder": ".",
+  "fixturesFolder": "./src/fixtures",
+  "integrationFolder": "./src/integration",
+  "modifyObstructiveCode": false,
+  "pluginsFile": "./src/plugins/index",
+  "supportFile": "./src/support/index.ts",
+  "video": true,
+  "videosFolder": "../../dist/cypress/apps/angular-msal-example-e2e/videos",
+  "screenshotsFolder": "../../dist/cypress/apps/angular-msal-example-e2e/screenshots",
+  "chromeWebSecurity": false,
+  "env": {
+    "tenantId": "8cf27ed2-2191-4df6-bbdf-ddac8c378292",
+    "clientId": "0d075d54-f239-4f5d-b62b-65363c6e0f75",
+    "clientSecret": "",
+    "apiScopes": ["user.read"],
+    "username": "msal-e2e-test-user@kauppfbioutlook.onmicrosoft.com",
+    "password": ""
+  }
+}
