@@ -11,7 +11,7 @@ describe('angular-msal-example', () => {
     getGreeting().contains('Angular MSAL Sample');
   });
 
-  it('should route to profile', () => {
+  it('should display user data', () => {
     cy.visit('/#/profile')
       .fixture('user.json')
       .then((expectedUser) =>

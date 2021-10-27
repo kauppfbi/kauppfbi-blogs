@@ -23,13 +23,24 @@
       }
     }
   },
-  "projects": {
-    "angular-msal-example": {
-      "tags": []
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "generators": {
+    "@nrwl/angular:application": {
+      "style": "css",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
     },
-    "angular-msal-example-e2e": {
-      "tags": [],
-      "implicitDependencies": ["angular-msal-example"]
+    "@nrwl/angular:library": {
+      "style": "css",
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "css"
     }
-  }
+  },
+  "defaultProject": "angular-msal-example"
 }

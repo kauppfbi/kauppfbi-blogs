@@ -1,3 +1,5 @@
+const { getJestProjects } = require('@nrwl/jest');
+
 module.exports = {
-  projects: ['<rootDir>/apps/angular-msal-example'],
+  projects: [...getJestProjects(), '<rootDir>/apps/angular-msal-example'],
 };

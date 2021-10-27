@@ -51,10 +51,10 @@ const buildIdTokenEntity = (
 
 const buildAccessTokenEntity = (
   homeAccountId: string,
-  accessToken: any,
+  accessToken: string,
   expiresIn: number,
   extExpiresIn: number,
-  realm: any,
+  realm: string,
   scopes: string[]
 ) => {
   const now = Math.floor(Date.now() / 1000);
@@ -115,7 +115,7 @@ const injectTokens = (tokenResponse: any) => {
 };
 
 export const login = (cachedTokenResponse: any) => {
-  let tokenResponse: null = null;
+  let tokenResponse: any = null;
   let chainable: Cypress.Chainable = cy.visit('/');
 
   if (!cachedTokenResponse) {
