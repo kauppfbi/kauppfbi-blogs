@@ -123,6 +123,7 @@
       },
       "tags": [],
       "implicitDependencies": ["angular-msal-example"]
-    }
+    },
+    "ideas-api": "apps/ideas-api"
   }
 }
