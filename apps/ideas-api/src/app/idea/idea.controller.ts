@@ -1,9 +1,9 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, Delete, Patch, Put } from '@nestjs/common';
 import { IdeaService } from './idea.service';
 import { CreateIdeaDto } from './dto/create-idea.dto';
 import { UpdateIdeaDto } from './dto/update-idea.dto';
 
-@Controller('idea')
+@Controller('v1/idea')
 export class IdeaController {
   constructor(private readonly ideaService: IdeaService) {}
 
@@ -19,16 +19,16 @@ export class IdeaController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.ideaService.findOne(+id);
+    return this.ideaService.findOne(id);
   }
 
-  @Patch(':id')
+  @Put(':id')
   update(@Param('id') id: string, @Body() updateIdeaDto: UpdateIdeaDto) {
-    return this.ideaService.update(+id, updateIdeaDto);
+    return this.ideaService.update(id, updateIdeaDto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.ideaService.remove(+id);
+    return this.ideaService.remove(id);
   }
 }

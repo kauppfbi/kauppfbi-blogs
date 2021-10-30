@@ -1,1 +1,5 @@
-export class CreateIdeaDto {}
+export class CreateIdeaDto {
+    idea: string;
+
+    description: string;
+}
