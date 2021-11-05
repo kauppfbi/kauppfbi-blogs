@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/fancy-greeter",
+  "sourceRoot": "libs/shared/fancy-greeter/src",
+  "prefix": "kauppfbi-blogs",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["dist/libs/shared/fancy-greeter"],
+      "options": {
+        "project": "libs/shared/fancy-greeter/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/shared/fancy-greeter/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/shared/fancy-greeter/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/fancy-greeter"],
+      "options": {
+        "jestConfig": "libs/shared/fancy-greeter/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/fancy-greeter/src/**/*.ts",
+          "libs/shared/fancy-greeter/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
