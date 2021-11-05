@@ -2,9 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'kauppfbi-blogs-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  template: `<kauppfbi-blogs-simple-greeter [name]="name"></kauppfbi-blogs-simple-greeter>`,
 })
 export class AppComponent {
-  title = 'test';
+  name = 'Duke';
 }
