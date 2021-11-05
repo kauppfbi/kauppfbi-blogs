@@ -124,6 +124,8 @@
       "tags": [],
       "implicitDependencies": ["angular-msal-example"]
     },
-    "shared-fancy-greeter": "libs/shared/fancy-greeter"
+    "shared-fancy-greeter": "libs/shared/fancy-greeter",
+    "test": "apps/test",
+    "test-e2e": "apps/test-e2e"
   }
 }
