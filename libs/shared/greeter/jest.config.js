@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'shared-fancy-greeter',
+  displayName: 'shared-greeter',
   preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -8,7 +8,7 @@ module.exports = {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../../coverage/libs/shared/fancy-greeter',
+  coverageDirectory: '../../../coverage/libs/shared/greeter',
   transform: {
     '^.+\\.(ts|js|html)$': 'jest-preset-angular',
   },

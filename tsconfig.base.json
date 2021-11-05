@@ -17,7 +17,8 @@
     "paths": {
       "@kauppfbi-blogs/fancy-greeter": [
         "libs/shared/fancy-greeter/src/index.ts"
-      ]
+      ],
+      "@kauppfbi-blogs/greeter": ["libs/shared/greeter/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

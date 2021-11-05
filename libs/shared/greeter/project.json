@@ -1,30 +1,30 @@
 {
   "projectType": "library",
-  "root": "libs/shared/fancy-greeter",
-  "sourceRoot": "libs/shared/fancy-greeter/src",
+  "root": "libs/shared/greeter",
+  "sourceRoot": "libs/shared/greeter/src",
   "prefix": "kauppfbi-blogs",
   "targets": {
     "build": {
       "executor": "@nrwl/angular:package",
-      "outputs": ["dist/libs/shared/fancy-greeter"],
+      "outputs": ["dist/libs/shared/greeter"],
       "options": {
-        "project": "libs/shared/fancy-greeter/ng-package.json"
+        "project": "libs/shared/greeter/ng-package.json"
       },
       "configurations": {
         "production": {
-          "tsConfig": "libs/shared/fancy-greeter/tsconfig.lib.prod.json"
+          "tsConfig": "libs/shared/greeter/tsconfig.lib.prod.json"
         },
         "development": {
-          "tsConfig": "libs/shared/fancy-greeter/tsconfig.lib.json"
+          "tsConfig": "libs/shared/greeter/tsconfig.lib.json"
         }
       },
       "defaultConfiguration": "production"
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/shared/fancy-greeter"],
+      "outputs": ["coverage/libs/shared/greeter"],
       "options": {
-        "jestConfig": "libs/shared/fancy-greeter/jest.config.js",
+        "jestConfig": "libs/shared/greeter/jest.config.js",
         "passWithNoTests": true
       }
     },
@@ -32,8 +32,8 @@
       "executor": "@nrwl/linter:eslint",
       "options": {
         "lintFilePatterns": [
-          "libs/shared/fancy-greeter/src/**/*.ts",
-          "libs/shared/fancy-greeter/src/**/*.html"
+          "libs/shared/greeter/src/**/*.ts",
+          "libs/shared/greeter/src/**/*.html"
         ]
       }
     }
