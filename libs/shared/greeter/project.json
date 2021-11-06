@@ -33,7 +33,9 @@
       "options": {
         "lintFilePatterns": [
           "libs/shared/greeter/src/**/*.ts",
-          "libs/shared/greeter/src/**/*.html"
+          "libs/shared/greeter/src/**/*.html",
+          "libs/shared/greeter/fancy-greeter/**/*.ts",
+          "libs/shared/greeter/fancy-greeter/**/*.html"
         ]
       }
     }
