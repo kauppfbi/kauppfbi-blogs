@@ -1,5 +1,8 @@
 {
   "extends": [
-    "config:base"
-  ]
+    "config:base",
+    "schedule:weekends",
+    "npm:unpublishSafe"
+  ],
+  "prConcurrentLimit": 5
 }
