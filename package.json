@@ -75,7 +75,7 @@
     "jest-preset-angular": "9.0.7",
     "jsonwebtoken": "8.5.1",
     "ng-packagr": "12.2.5",
-    "postcss": "8.3.11",
+    "postcss": "8.4.31",
     "postcss-import": "14.0.2",
     "postcss-preset-env": "6.7.0",
     "postcss-url": "10.1.3",
