@@ -73,7 +73,7 @@
     "eslint-plugin-cypress": "2.12.1",
     "jest": "27.2.3",
     "jest-preset-angular": "9.0.7",
-    "jsonwebtoken": "8.5.1",
+    "jsonwebtoken": "9.0.0",
     "ng-packagr": "12.2.5",
     "postcss": "8.3.11",
     "postcss-import": "14.0.2",
